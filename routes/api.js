@@ -52,7 +52,7 @@ function newClientInstance() {
 		'username': ""
 	};
 	clients.push(client);
-	console.log("A new player joined the game".inverse);
+	//console.log("A new player joined the game".inverse);
 	return client;
 }
 
