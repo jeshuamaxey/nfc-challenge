@@ -29,7 +29,7 @@ app.processUsername = function() {
 
 app.setID = function() {
 	//if app.clientInfoExists, create a new instance & allow challenge
-	if (localStorage.getItem("clientInfo") === null) {
+	if (ls.getObject("clientInfo") === null) {
 		app.allowChallenge();
 	}
 	//if app.clientInfoExists, check they last played yesterday (mimicked) else disallow challenge
