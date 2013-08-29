@@ -1,10 +1,14 @@
-# Jotta
+# NFC Challenge
 
-Jotta is a barebones Node.js server which uses the Express framework. It exists to get a simple express implementation up and running super duper quick. It can be quickly deployed to Heroku following the instructions below (adapted from the [Heroku documentation for implementing Node.js](https://devcenter.heroku.com/articles/nodejs)).
+This game is designed to replicate an advertising campaign run by Mc Donalds. The basic idea is that a user touches their phone against an advert and an embedded NFC tag launches a web app showing a countdown. The user is encouraged to get to a destination before the timer runs out to gain a reward. When the user touches their phone against the second NFC tag, they are either shown comiseraions or a voucher.
 
-Jotta works very well with [Squared Paper](http://github.com/jeshuamaxey/squared-paper), a front end amalgam of boilerplate code.
+The app utilises the HTML5 local storage API. It can be simulated with two browser windows but for full effect requires an NFC enabled phone (sorry Apple fans).
 
-## Running Jotta Locally
+## Setting up NFC tags
+
+I've found [Radpid NFC](http://rapidnfc.com/) to be an invaluable source about all things NFC as well as a good place to get hold of a variety of tags. To write URLs to NFC tags, I recommend TagWriter by NXP (an Android application).
+
+## Running The App Locally
 
 ### Prerequisites
 
@@ -12,8 +16,9 @@ I am assuming you have Node.js and NPM installed locally on your machine. If you
 
 ### Running the server
 
-Navigate to the Jotta directory in a terminal window and run the following command:
+From a terminal window run the following commands from the root of this repo:
 ```
+npm install
 node index.js
 ```
 By default, the server runs at [http://localhost:5000](http://localhost:5000).
@@ -26,7 +31,7 @@ As well as all the prerequisites of the previous section, I am assuming you have
 
 ### Deploying the server
 
-From a terminal window, navigate to the newly cloned Jotta directory and login with your Heroku account details using the `heroku login` command.
+From a terminal window login with your Heroku account details using the `heroku login` command.
 
 You can run the server locally using `foreman start` to make sure things are in order before you deploy the app.
 
@@ -49,10 +54,8 @@ More info about using ssh with Heroku can be found [here](https://devcenter.hero
 heroku open
 ```
 
-By default, you will be running one dyno. This can be changed with the following command:
+By default, you will be running one dyno. This can be changed with the following command (this will incur costs to your Heroku account):
 ```
 heroku ps:scale web=2 #for running 2 dynos
 ```
 To learn more about dynos and scaling, visit the [Heroku documentation](https://devcenter.heroku.com/articles/dynos). Info about dynos and billing can be found [here](https://devcenter.heroku.com/articles/usage-and-billing).
-
-To dive deeper into deploying a Node.js backend with Heroku, see [this article](https://devcenter.heroku.com/articles/nodejs).
