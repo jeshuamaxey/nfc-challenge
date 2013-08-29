@@ -1,0 +1,60 @@
+/*
+*
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
+*
+*/
+
+/* =Reset
+----------------------------------------------- */
+//@import "reset";
+
+/* =Twitter Bootstrap
+----------------------------------------------- */
+@import "bootstrap.min";
+@import "bootstrap-glyphicons";
+
+/* =Global
+----------------------------------------------- */
+
+//SASS variables
+
+$yellow: rgb(255, 255, 0);
+
+//Styles
+
+body {
+	text-align: center;
+	padding: 0 15px;
+}
+
+#name {
+	//hide by default
+	display: none;
+}
+
+#game {
+	.flip-clock-wrapper {
+		margin: 25px auto 110px auto;
+		max-width: 300px;
+	}
+
+	.data-entry {
+		//padding: 5px;
+		max-width: 240px;
+		margin: 0 auto;
+	}
+
+	//hide by default
+	display: none;
+}
+
+
+/* =Media Queries / Responsive Styles Imports
+----------------------------------------------- */
+@import "desktop";
+@import "tablet";
+@import "mobile";
+@import "device-specific";
