@@ -4070,6 +4070,9 @@ body {
   text-align: center;
   padding: 0 15px; }
 
+img {
+  max-width: 50%; }
+
 #name {
   display: none; }
 

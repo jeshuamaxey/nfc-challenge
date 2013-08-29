@@ -11,7 +11,6 @@ app.main = function() {
 
 app.setupEventHandlers = function() {
 		$("#username").keypress(function(e) {
-		console.log("Handler for .keypress() called.");
 		if(e.which == 13) {
 			app.processUsername();
 		}
@@ -85,7 +84,10 @@ app.allowChallenge = function() {
 	//see this stackoverflow ans from rsp for details on promises
 	// http://stackoverflow.com/questions/5316697/jquery-return-data-after-ajax-call-success
 	clientInstance.success(function (data) {
+		app.clientInfo = data;
 		ls.setObject("clientInfo", data);
+		console.log("data from returned promise of clientInstance API call:");
+		console.log(data);
 		//app.clientInfo = JSON.stringify(data);
 		//localStorage.setItem("clientInfo", app.clientInfo);
 	});

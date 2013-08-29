@@ -32,7 +32,7 @@ exports.username = function(request, response) {
 */
 
 var game = {
-	timeLimit: 5000 //in ms
+	timeLimit: 15000 //in ms
 };
 
 clients = []; //screw data bases arrays ftw

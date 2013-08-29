@@ -9,9 +9,13 @@ app.main = function() {
 	}).done(function(data) {
 		console.log(data);
 		if(data.inTime) {
-			$('#message').html("You Made It "+app.clientInfo.username+"!");
+			$('#headline').html("You Made It "+app.clientInfo.username+"!");
+			$('#message').html("Congratulations! Show this screen to the spotty teen at the till and claim your free cookie");
+			$('img').attr("src", "img/success.jpg")
 		} else {
-			$('#message').html("Too slow "+app.clientInfo.username+"!");
+			$('#headline').html("Too slow "+app.clientInfo.username+"!");
+			$('#message').html("Bad luck! You can try again tomorrow for your free cookie");
+			$('img').attr("src", "img/fail.jpg")
 		}
 	});
 };
