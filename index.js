@@ -7,6 +7,18 @@ var app = express();
 
 var port = process.env.PORT || 8080;
 
+/*
+*	game variables
+* /
+
+var game = {
+	timeLimit: process.argv[2]*1000 || 15000 //in ms
+};
+
+*/
+
+//console.log(game.timeLimit);
+
 app.configure(function () {
   app.use(express.bodyParser());
 });

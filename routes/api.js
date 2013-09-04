@@ -28,12 +28,8 @@ exports.username = function(request, response) {
 	clients[clientInfo.id].username = clientInfo.username;
 };
 
-/*
-*	game variables
-*/
-
 var game = {
-	timeLimit: 15000 //in ms
+	timeLimit: process.argv[2]*1000 || 15000 //in ms
 };
 
 clients = []; //screw data bases arrays ftw
