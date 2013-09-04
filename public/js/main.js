@@ -24,6 +24,8 @@ app.processUsername = function() {
 	$('#name').html(" "+app.clientInfo.username).fadeIn();
 	//store name locally to be retreived later when they reach the finish
 	ls.setObject("clientInfo", app.clientInfo);
+	//send username back to server for storage
+	$.post("/api/username/", app.clientInfo);
 };
 
 app.setID = function() {

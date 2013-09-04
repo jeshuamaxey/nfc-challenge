@@ -17,14 +17,15 @@ exports.arrived = function(request, response) {
 
 exports.stats = function(request, response) {
 	var stats = {
-		"number of games in progress": clients.length
+		"number of games played": clients.length,
+		"players": clients
 	};
   response.send(stats);
 };
 
 exports.username = function(request, response) {
-	var username = request.params.username;
-  response.send(stats);
+	var clientInfo = request.body;
+	clients[clientInfo.id].username = clientInfo.username;
 };
 
 /*

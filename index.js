@@ -23,7 +23,7 @@ app.get("/api/arrived/:id", api.arrived);
 app.get("/api/stats", api.stats);
 
 //not sure this does anything yet
-app.post("/api/username/:username", api.username);
+app.post("/api/username/", api.username);
 
 /*
 *
