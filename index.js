@@ -17,12 +17,23 @@ app.use(express.static(__dirname + '/public'));
 /*
 * API routes
 */
+
+/*
+* GETs
+*/
+//displays API status
 app.get("/api", api.api);
+//return a client instance to the app
 app.get("/api/client_instance", api.clientInstance);
+//tells the sever that client has arrived - returns true/false depending on whether they're in time
 app.get("/api/arrived/:id", api.arrived);
+//returns stats and info stored on the server (in JSON)
 app.get("/api/stats", api.stats);
 
-//not sure this does anything yet
+/*
+* POSTs
+*/
+//handles the storage of usernams on the server when the user hits enter on the app
 app.post("/api/username/", api.username);
 
 /*
