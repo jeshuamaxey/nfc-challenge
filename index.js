@@ -1,7 +1,6 @@
 var express = require("express");
 var http = require("http");
 var url  = require("url");
-//var colors = require('colors');
 var api = require('./routes/api');
 var app = express();
 

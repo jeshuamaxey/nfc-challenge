@@ -1,12 +1,14 @@
 var app = app || {}; //global app namespace
 
-app.timeLimit = 15; //in seconds
+app.timeLimit = config.timeLimit; //in seconds
 app.now = new Date().getTime();
 app.localData = {};
 
 app.main = function() {
 	app.setID();
 	app.setupEventHandlers();
+	if(config.showMap)
+		app.showMap();
 };
 
 app.setupEventHandlers = function() {
@@ -67,15 +69,9 @@ app.disallowChallenge = function() {
 };
 
 app.allowChallenge = function() {
-	/*
-	* THIS FUNCTION NEEDS A LOT OF WORK - IT'S CURRENTLY BREAKING EVERYTHING
-	* THE ID ALWAYS COMES OUT AS 0 ON ARRIVED.HTML
-	* SOMETHING TO DO WITH WHAT THE API RETURNS, HOW IT'S HANDLED & STORED
-	* FUCKING ASYNCHRONOUS JAVASCRIPT
-	*/
 	console.log("challenge allowed");
 	/*
-	* clietInfo objin local storage needs to be set to null because api returns a promise
+	* clietInfo obj in local storage needs to be set to null because api returns a promise
 	* so old id is acted upon causing the app track wrong progress
 	*/
 	ls.setObject("clientInfo", null);
@@ -90,8 +86,6 @@ app.allowChallenge = function() {
 		ls.setObject("clientInfo", data);
 		console.log("data from returned promise of clientInstance API call:");
 		console.log(data);
-		//app.clientInfo = JSON.stringify(data);
-		//localStorage.setItem("clientInfo", app.clientInfo);
 	});
 	//set coutdown running
 	$('#game').fadeIn();
@@ -101,8 +95,8 @@ app.allowChallenge = function() {
 	});
 };
 
-app.enterUsername = function() {
-
+app.showMap = function() {
+	$("#map").show();
 };
 
 /*
