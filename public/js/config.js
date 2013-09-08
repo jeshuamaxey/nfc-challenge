@@ -5,9 +5,12 @@ var config = {
 	"showMap" : true, //set to false if not
 	"countUp" : false, //set to true to count up
 	// Images - filename only (not file path)
-	"defaultImage" : "",
+	"defaultImage" : "", //doesn't work yet
 	"successImage" : "",
-	"failImage" : ""
+	"failImage" : "",
+	// Images - filename only (not file path)
+	"successMessage" : "",
+	"failMessage" : ""
 };
 
 /*
