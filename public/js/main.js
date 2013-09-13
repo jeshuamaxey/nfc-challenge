@@ -7,8 +7,6 @@ app.localData = {};
 app.main = function() {
 	app.setID();
 	app.setupEventHandlers();
-	if(config.showMap)
-		app.showMap();
 };
 
 app.setupEventHandlers = function() {
@@ -28,6 +26,10 @@ app.processUsername = function() {
 	ls.setObject("clientInfo", app.clientInfo);
 	//send username back to server for storage
 	$.post("/api/username/", app.clientInfo);
+	//show map according to config vars
+	if(config.showMap) {
+		app.showMap();
+	}
 };
 
 app.setID = function() {
@@ -97,6 +99,7 @@ app.allowChallenge = function() {
 
 app.showMap = function() {
 	$("#map").show();
+	initializeMap();
 };
 
 /*

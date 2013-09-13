@@ -10,7 +10,11 @@ var config = {
 	"failImage" : "",
 	// Images - filename only (not file path)
 	"successMessage" : "",
-	"failMessage" : ""
+	"failMessage" : "",
+	"targetPosition" : { //default is shoreditch grind
+		"latitude" : 51.525877,
+		"longitude" : -0.088181
+	}
 };
 
 /*
