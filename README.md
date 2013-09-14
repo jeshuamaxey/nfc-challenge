@@ -8,6 +8,13 @@ The app utilises the HTML5 local storage API. It can be simulated with two brows
 
 I've found [Radpid NFC](http://rapidnfc.com/) to be an invaluable source about all things NFC as well as a good place to get hold of a variety of tags. To write URLs to NFC tags, I recommend TagWriter by NXP (an Android application).
 
+The two URLs that need writing to the tags are:
+
+````
+http://something-queer-1234.herokuapp.com
+http://something-queer-1234.herokuapp.com/arrived
+````
+
 ## Running The App Locally
 
 ### Prerequisites
@@ -59,3 +66,7 @@ By default, you will be running one dyno. This can be changed with the following
 heroku ps:scale web=2 #for running 2 dynos
 ```
 To learn more about dynos and scaling, visit the [Heroku documentation](https://devcenter.heroku.com/articles/dynos). Info about dynos and billing can be found [here](https://devcenter.heroku.com/articles/usage-and-billing).
+
+## Configuring the App
+
+To change different aspects of the app, got to `http://something-queer-1234.herokuapp.com/settings` and configure it according to your requirements. Going to `http://something-queer-1234.herokuapp.com/settings/get` will display the current settings in raw JSON form.
