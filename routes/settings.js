@@ -29,7 +29,7 @@ exports.update = function(data) {
 		"defaultImage" : newSettings.defaultImage || settings.defaultImage,
 		"successImage" : newSettings.successImage || settings.successImage,
 		"failImage" : newSettings.failImage || settings.failImage,
-		"successMessage" : newSettings.successImage || settings.successMessage,
+		"successMessage" : newSettings.successMessage || settings.successMessage,
 		"failMessage" : newSettings.failMessage || settings.failMessage,
 		"targetPosition" : newSettings.targetPosition || settings.targetPosition
 	}
