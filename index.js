@@ -2,6 +2,7 @@ var express = require("express");
 var http = require("http");
 var url  = require("url");
 var api = require('./routes/api');
+var settings = require('./routes/settings');
 var app = express();
 
 var port = process.env.PORT || 8080;
@@ -46,6 +47,8 @@ app.get("/api/stats", api.stats);
 */
 //handles the storage of usernams on the server when the user hits enter on the app
 app.post("/api/username/", api.username);
+//handles settings updates
+app.post("/settings/update/", settings.update);
 
 /*
 *
