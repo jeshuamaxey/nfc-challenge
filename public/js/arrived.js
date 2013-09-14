@@ -22,7 +22,7 @@ app.main = function() {
 		} else {
 			$('#headline').html("Too slow "+app.clientInfo.username+"!");
 			$('#message').html("Bad luck! You can try again tomorrow for your free cookie");
-			$('img#outcome').attr("src", "img/fail.jpg");
+			$('img#outcome').attr("src", "img/fail.png");
 			// only change image to the config one if the variable has been editted
 			if (config.failImage.length) {
 				$('img#outcome').attr("src", "img/"+config.failImage);
