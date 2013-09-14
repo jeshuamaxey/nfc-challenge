@@ -47,6 +47,8 @@ app.get("/api/stats", api.stats);
 */
 //handles the storage of usernams on the server when the user hits enter on the app
 app.post("/api/username/", api.username);
+//returns current game settings
+app.get("/settings", settings.show);
 //handles settings updates
 app.post("/settings/update/", settings.update);
 
