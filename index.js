@@ -58,7 +58,7 @@ app.post("/api/username", api.username);
 */
 
 //returns current game settings
-app.get("/settings/show", settings.show);
+app.get("/settings/get", settings.get);
 
 /*
 * POSTs

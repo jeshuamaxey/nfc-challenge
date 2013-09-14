@@ -16,7 +16,7 @@ var settings = {
 	}
 }
 
-exports.show = function(request, response) {
+exports.get = function(request, response) {
 	response.send(settings);
 }
 
@@ -34,8 +34,4 @@ exports.update = function(data) {
 		"targetPosition" : newSettings.targetPosition || settings.targetPosition
 	}
 	//console.log(settings);
-}
-
-exports.get = function(){
-	return settings;
 }
