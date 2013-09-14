@@ -1,3 +1,11 @@
+/*
+var settings = require('./settings');
+
+exports.settings = function() {
+	return settings;
+};
+*/
+
 exports.api = function(request, response) {
 	response.send("API is running");
 };

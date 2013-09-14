@@ -27,8 +27,8 @@ app.configure(function () {
 app.use(express.static(__dirname + '/public'));
 
 /*
-* API routes
-*/
+* API ROUTES
+*************/
 
 /*
 * GETs
@@ -46,11 +46,26 @@ app.get("/api/stats", api.stats);
 * POSTs
 */
 //handles the storage of usernams on the server when the user hits enter on the app
-app.post("/api/username/", api.username);
+app.post("/api/username", api.username);
+
+
+/*
+* SETTINGS ROUTES
+******************/
+
+/*
+* GETS
+*/
+
 //returns current game settings
-app.get("/settings", settings.show);
+app.get("/settings/show", settings.show);
+
+/*
+* POSTs
+*/
+
 //handles settings updates
-app.post("/settings/update/", settings.update);
+app.post("/settings/update", settings.update);
 
 /*
 *

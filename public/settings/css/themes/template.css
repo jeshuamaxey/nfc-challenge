@@ -1,0 +1,36 @@
+/*
+* the background of your app
+*/
+
+body {
+	background-color: ;
+	background-image: url();
+	/*
+	* use the following line of code if you'd like the
+	* background image to appear onc and fill the screen size
+	*
+	* bakground-size: cover;
+	*
+	*/
+}
+
+/*
+* the large headline at the top of the app
+*/
+
+h1 {
+	font-family: ;
+	/* text color */
+	color: ;
+}
+
+/*
+* the main body of text which gives instructions and tells
+* the user whether they've succeded or failed
+*/
+
+p.lead {
+	font-family: ;
+	/* text color */
+	color: ;
+}
