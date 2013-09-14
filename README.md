@@ -70,3 +70,14 @@ To learn more about dynos and scaling, visit the [Heroku documentation](https://
 ## Configuring the App
 
 To change different aspects of the app, got to `http://something-queer-1234.herokuapp.com/settings` and configure it according to your requirements. Going to `http://something-queer-1234.herokuapp.com/settings/get` will display the current settings in raw JSON form.
+
+## API
+
+To check the API status, visit:
+````
+http://something-queer-1234.herokuapp.com/api
+````
+To see all the API data in raw JSON, visit:
+````
+http://something-queer-1234.herokuapp.com/api/stats
+````
