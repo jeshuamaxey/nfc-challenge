@@ -1,3 +1,5 @@
+var settings = require('./settings');
+
 exports.api = function(request, response) {
 	response.send("API is running");
 };
@@ -63,5 +65,5 @@ function inTime(id) {
 	console.log("ID: " + id);
 	console.log("In time? " + (elapsed < game.timeLimit ? "yes" : "no"));
 	var elapsed = now - clients[id].idLastSet;
-	return elapsed < game.timeLimit ? true : false;
+	return elapsed < settings.retrieve("timeLimit") ? true : false;
 }

@@ -1,4 +1,15 @@
-$("form").submit(updateConfiguration);
+$(document).ready(main);
+
+function main() {
+	$("form").submit(updateConfiguration);
+	$("#show-map").change(function(){
+		if(this.checked) {
+			$(".lat-lon-wrapper input").attr('disabled', false);
+		} else {
+			$(".lat-lon-wrapper input").attr('disabled', true);
+		}
+	});
+}
 
 function updateConfiguration(e) {
 	//stop page redirection

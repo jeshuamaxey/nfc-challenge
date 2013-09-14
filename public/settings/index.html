@@ -26,7 +26,6 @@
         <!-- Add your site or application content here -->
         <div class="container">
             <h1>Configure your app here</h1>
-            <h2>FYI: this doesn't do anything yet</h2>
             <form role="form" action="/">
                 <!-- GAME VARIABLES -->
               <div class="time-limit">
@@ -39,25 +38,20 @@
                   <input type="checkbox" id="show-map">
                 </label>
               </div>
-              <div class="">
-                <label>
-                    Enter the latitude of the target destination:
-                    <input type="text" id="latitude" class="form-control">
-                </label>
-              </div>
-              <div class="">
-                <label>
-                    Enter the longitude of the target destination:
-                    <input type="text" id="longitude" class="form-control">
-                </label>
-              </div>
-
-              <div id="count-up" class="">
-                <label>
-                    Check if you'd like the counter to count up, not down:
-                  <input type="checkbox" id="count-up">
-                </label>
-              </div>
+              <div class="lat-lon-wrapper">
+                <div class="">
+                  <label>
+                      Enter the latitude of the target destination:
+                      <input type="text" id="latitude" class="form-control" disabled=true>
+                  </label>
+                </div>
+                <div class="">
+                  <label>
+                      Enter the longitude of the target destination:
+                      <input type="text" id="longitude" class="form-control" disabled=true>
+                  </label>
+                </div>
+              </div><!-- .lat-lon-wrapper -->
               <!-- CONTENT OPTIONS -->
               <div class="image-url">
                   <label for="">Enter the URL of the image the user will see if they succeed</label>

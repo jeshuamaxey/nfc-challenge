@@ -1,8 +1,7 @@
 var settings = {
 	//Game Variables
 	"timeLimit" : 15, //in seconds - see below for extra details
-	"showMap" : true, //set to false if not
-	"countUp" : false, //set to true to count up
+	"showMap" : false, //set to ture or false
 	// Images - filename only (not file path)
 	"defaultImage" : "", //doesn't work yet
 	"successImage" : "",
@@ -20,12 +19,15 @@ exports.get = function(request, response) {
 	response.send(settings);
 }
 
+exports.retrieve = function(key) {
+	return settings[key];
+}
+
 exports.update = function(data) {
 	var newSettings = data.body;
 	settings = {
 		"timeLimit" : newSettings.timeLimit || settings.timeLimit,
 		"showMap" : newSettings.showMap || settings.showMap,
-		"countUp" : newSettings.countUp || settings.countUp,
 		"defaultImage" : newSettings.defaultImage || settings.defaultImage,
 		"successImage" : newSettings.successImage || settings.successImage,
 		"failImage" : newSettings.failImage || settings.failImage,
