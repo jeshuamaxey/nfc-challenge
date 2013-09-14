@@ -26,6 +26,7 @@ function getSettings() {
 		"successImage" : $("#success-image").val() || null,
 		"failImage" : $("#fail-image").val() || null,
 		"successMessage" : $("#success-message").val() || null,
+		//"failMessage" : $("#fail-message").val() || null,
 		"failMessage" : $("#fail-message").val() || null
 	};
 	return settings;
