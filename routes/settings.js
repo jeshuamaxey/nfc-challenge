@@ -33,7 +33,7 @@ exports.update = function(data) {
 		"failMessage" : newSettings.failMessage || settings.failMessage,
 		"targetPosition" : newSettings.targetPosition || settings.targetPosition
 	}
-	console.log(settings);
+	//console.log(settings);
 }
 
 exports.get = function(){
