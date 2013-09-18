@@ -18,13 +18,13 @@ function updateConfiguration(e) {
 	var settings = getSettings();
 
 	$.post('/settings/update/', settings, function() {
-		console.log("POST MADE")
+		console.log("POST MADE");
 	});
-}
+};
 
 function getSettings() {
 	var settings = {
-		"timeLimit" : $("#time-limit").val() || null,
+		"timeLimit" : $("#time-limit").val()*1000 || null, //convert to milliseconds
 		"showMap" : $("#show-map").val() || null,
 		"targetPosition" : { //default is shoreditch grind
 			"latitude" : $("#latitude").val() || null,

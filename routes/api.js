@@ -63,7 +63,10 @@ function generateUniqueKey() {
 function inTime(id) {
 	var now = new Date().getTime();
 	console.log("ID: " + id);
-	console.log("In time? " + (elapsed < game.timeLimit ? "yes" : "no"));
 	var elapsed = now - clients[id].idLastSet;
+	console.log("In time? " + (elapsed < game.timeLimit ? "yes" : "no"));
+	console.log("Time Limit: "+game.timeLimit);
+	console.log("Time Limit 2:"+settings.retrieve("timeLimit"));
+	console.log("Elapsed: "+elapsed);
 	return elapsed < settings.retrieve("timeLimit") ? true : false;
 }

@@ -1,6 +1,6 @@
 var settings = {
 	//Game Variables
-	"timeLimit" : 15, //in seconds - see below for extra details
+	"timeLimit" : 15*1000, //in milliseconds
 	"showMap" : false, //set to ture or false
 	// Images - filename only (not file path)
 	"defaultImage" : "", //doesn't work yet
@@ -17,11 +17,11 @@ var settings = {
 
 exports.get = function(request, response) {
 	response.send(settings);
-}
+};
 
 exports.retrieve = function(key) {
 	return settings[key];
-}
+};
 
 exports.update = function(data) {
 	var newSettings = data.body;
@@ -34,6 +34,6 @@ exports.update = function(data) {
 		"successMessage" : newSettings.successMessage || settings.successMessage,
 		"failMessage" : newSettings.failMessage || settings.failMessage,
 		"targetPosition" : newSettings.targetPosition || settings.targetPosition
-	}
+	};
 	//console.log(settings);
-}
+};

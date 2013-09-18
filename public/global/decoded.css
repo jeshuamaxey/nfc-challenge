@@ -1,0 +1,12 @@
+body {
+	padding: 0;
+	font-family: "DIN Next";
+}
+
+.container {
+	border-top: solid yellow 20px;
+}
+
+h1, h2, h3 {
+	font-family: "DIN Next-500";
+}
