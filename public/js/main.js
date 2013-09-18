@@ -91,9 +91,14 @@ app.allowChallenge = function() {
 	});
 	//set coutdown running
 	$('#game').fadeIn();
-	var clock = $('#countdown').FlipClock(app.timeLimit, {
+	//request settings from the server
+	$.ajax({
+		url : "/settings/get"
+	}).done(function(data) {
+		var clock = $('#countdown').FlipClock(data.timeLimit/1000, {
 		'countdown': true,
 		'clockFace': 'MinuteCounter'
+	});
 	});
 };
 
