@@ -8,13 +8,14 @@ app.main = function() {
 		url : "/settings/get"
 	}).done(function(data) {
 		app.config = data;
+		console.log(data);
 	});
 	//ask the server whether the client is in time
 	$.ajax({
 		url : "/api/arrived/"+ app.clientInfo.id,
 		statusCode: {
 			//can't get this to work. function is called regardless
-		    //500: app.serverError()
+			//500: app.serverError()
 		}
 	}).done(function(data) {
 		if(data.inTime) {
