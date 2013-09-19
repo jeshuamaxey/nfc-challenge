@@ -96,9 +96,9 @@ app.allowChallenge = function() {
 		url : "/settings/get"
 	}).done(function(data) {
 		var clock = $('#countdown').FlipClock(data.timeLimit/1000, {
-		'countdown': true,
-		'clockFace': 'MinuteCounter'
-	});
+			'countdown': true,
+			'clockFace': 'MinuteCounter'
+		});
 	});
 };
 
